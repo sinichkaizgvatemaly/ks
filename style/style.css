@@ -810,13 +810,12 @@ h4 {
 	color: white;
 	border-radius: 10px;
 	background-color: #2F303A;
+	padding: 20px;
 	border: 1px solid #888;
 	width: 80%;
 	animation: slide-in 0.5s ease;
 	position: relative;
 }
-
-
 
 
 
