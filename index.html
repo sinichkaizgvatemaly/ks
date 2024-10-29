@@ -35,11 +35,62 @@
             <hr class="custom-line">
         </header>
         <main class="main" id="main">
-            <section class="block-one" id="block-one">
-                <h1>Ефективні рішення для<br>
-                    вашого бізнесу</h1>
-                <button class="category-button">Замовити</button>
-            </section>
+			<section class="block-one" id="block-one">
+				<h1>Ефективні рішення для<br>
+					вашого бізнесу</h1>
+				<button class="category-button" id="openModal">Замовити</button> <!-- Добавляем id для кнопки -->
+		  </section>
+
+
+
+
+
+
+		  <div id="myModal" class="modal">
+			<div class="modal-content">
+				 <span class="close">&times;</span>
+				 <h2>Ваше замовлення</h2>
+				 <form id="modal-content">
+					  <label class="label-modal" for="fullName">Ім'я:</label>
+					  <input type="text" id="fullName" name="fullName" required placeholder="Ім'я">
+	  
+					  <label class="label-modal" for="email">Електронна пошта:</label>
+					  <input type="email" id="email" name="email" required placeholder="your@email.com">
+	  
+					  <label class="label-modal" for="phone">Номер телефону:</label>
+					  <input type="tel" id="phone" name="phone" required placeholder="+380 (xx) xxx xx xx">
+	  
+					  <label class="label-modal" for="comment">Коментар:</label>
+					  <textarea id="comment" name="comment" rows="4" placeholder="Ваш коментар"></textarea>
+	  
+					  <button class="category-button" type="submit">Відправити</button>
+				 </form>
+			</div>
+	  </div>
+	  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+		  
+
+
+
+
+
             <section class="columns">
                 <div class="column">
                     <div class="column-img-wrapper">
@@ -189,7 +240,9 @@
                 <a href="index.html" class="WebStudio WebStudio-header">
                     <span class="web">Kior</span> <span class="studio WebStudio-footer">Studio</span>
                 </a>
-                <p class="footer-address">м. Київ, пр-т Лесі Українки, 26</p>
+                <p class="footer-address">Kalvarijų gatvė 101
+						LT-08219 Vilnius
+						Литва</p>
                 <p class="footer-email">
                     <a href="mailto:pavelkior@icloud.com">pavelkior@icloud.com</a>
                 </p>
