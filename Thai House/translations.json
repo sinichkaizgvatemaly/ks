@@ -1,0 +1,74 @@
+{
+    "en": {
+        "header": {
+            "menu": "Menu",
+            "delivery": "Delivery",
+            "shop": "Shop",
+            "workingHours": "Working hours",
+            "contacts": "Contacts"
+        },
+        "about": {
+            "title": "Thai Restaurant in Vilnius",
+            "description": "Where you can enjoy a variety of dishes prepared using traditional recipes and ingredients. Our restaurant offers guests authentic tastes of Thailand, such as Tom Yum, Pad Thai, curry, spring rolls, and much more..."
+        },
+        "footer": {
+            "followUs": "Follow us on social media for updates!",
+            "aboutUs": "About Us",
+            "privacyPolicy": "Privacy Policy"
+        }
+    },
+    "ru": {
+        "header": {
+            "menu": "Меню",
+            "delivery": "Доставка",
+            "shop": "Магазин",
+            "workingHours": "Часы работы",
+            "contacts": "Контакты"
+        },
+        "about": {
+            "title": "Тайский ресторан в Вильнюсе",
+            "description": "Где вы можете насладиться разнообразием блюд, приготовленных по традиционным рецептам и ингредиентам..."
+        },
+        "footer": {
+            "followUs": "Следите за нами в социальных сетях, чтобы быть в курсе событий!",
+            "aboutUs": "О нас",
+            "privacyPolicy": "Политика конфиденциальности"
+        }
+    },
+    "lt": {
+        "header": {
+            "menu": "Meniu",
+            "delivery": "Pristatymas",
+            "shop": "Parduotuvė",
+            "workingHours": "Darbo laikas",
+            "contacts": "Kontaktai"
+        },
+        "about": {
+            "title": "Tajų restoranas Vilniuje",
+            "description": "Kur galite mėgautis įvairiais patiekalais, paruoštais pagal tradicinius receptus ir ingredientus..."
+        },
+        "footer": {
+            "followUs": "Sekite mus socialiniuose tinkluose, kad gautumėte naujienas!",
+            "aboutUs": "Apie mus",
+            "privacyPolicy": "Privatumo politika"
+        }
+    },
+    "uk": {
+        "header": {
+            "menu": "Меню",
+            "delivery": "Доставка",
+            "shop": "Магазин",
+            "workingHours": "Години роботи",
+            "contacts": "Контакти"
+        },
+        "about": {
+            "title": "Тайський ресторан у Вільнюсі",
+            "description": "Де ви можете насолоджуватися різноманітними стравами, приготованими за традиційними рецептами та інгредієнтами..."
+        },
+        "footer": {
+            "followUs": "Слідкуйте за нами в соціальних мережах, щоб отримувати новини!",
+            "aboutUs": "Про нас",
+            "privacyPolicy": "Політика конфіденційності"
+        }
+    }
+}
