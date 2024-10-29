@@ -1,4 +1,5 @@
 <!DOCTYPE html>
+<html lang="ru">
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -10,31 +11,41 @@
     <link href="https://fonts.googleapis.com/css?family=Raleway:600" rel="stylesheet" />
     <link href="https://fonts.googleapis.com/css?family=Roboto:100,100italic,300,300italic,regular,italic,500,500italic,700,700italic,900,900italic" rel="stylesheet" />
     <link rel="stylesheet" href="style/style.css" />
-	 <style>
-
-		h1 {
-			 text-align: center;
-
-		}
-		.contact-info {
-			 margin: 20px 0;
-			 padding: 15px;
-			 background-color: #fff;
-			 border-radius: 5px;
-			 box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-		}
-		.contact-info p {
-			 margin: 8px 0;
-			 font-size: 16px;
-		}
-		.contact-info a {
-			 color: #2196F3;
-			 text-decoration: none;
-		}
-		.contact-info a:hover {
-			 text-decoration: underline;
-		}
-  </style>
+    <style>
+        .bg {
+            fill: #2F303A; /* Цвет фона */
+        }
+        .shape {
+            fill: #2196F3; /* Цвет фигуры */
+        }
+        .text {
+            fill: #ACACB0; /* Цвет текста */
+            font-family: 'Arial, sans-serif';
+            font-size: 24px;
+            font-weight: bold;
+        }
+        h1 {
+            text-align: center;
+        }
+        .contact-info {
+            margin: 20px 0;
+            padding: 15px;
+            background-color: #fff;
+            border-radius: 5px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+        .contact-info p {
+            margin: 8px 0;
+            font-size: 16px;
+        }
+        .contact-info a {
+            color: #2196F3;
+            text-decoration: none;
+        }
+        .contact-info a:hover {
+            text-decoration: underline;
+        }
+    </style>
 </head>
 <body>
     <div class="wraper">
@@ -60,28 +71,28 @@
             <hr class="custom-line">
         </header>
         <main class="main" id="main">
-			<h1>Kior Studio</h1>
-			<div class="contact-info">
-				 <p>Адрес: м. Київ, пр-т Лесі Українки, 26</p>
-				 <p>Email: <a href="mailto:pavelkior@icloud.com">pavelkior@icloud.com</a></p>
-				 <p>Телефон: <a href="tel:+37064112831">+370 (641) 12 831</a></p>
-			</div>
-
-
-
-
-
-
-
-
-
+            <svg width="200" height="100" xmlns="http://www.w3.org/2000/svg">
+                <rect width="100%" height="100%" fill="#F8F9FA"/> <!-- Фоновый цвет -->
+                <circle cx="50" cy="50" r="40" class="shape"/>
+                <rect x="100" y="30" width="80" height="40" fill="#6C757D" rx="10" /> <!-- Прямоугольник -->
+                <text x="140" y="55" class="text" text-anchor="middle">Kior Studio</text>
+            </svg>
+            <div class="contact-info">
+                <p>Kalvarijų gatvė 101
+                    LT-08219 Vilnius
+                    Литва</p>
+                <p>Email: <a href="mailto:pavelkior@icloud.com">pavelkior@icloud.com</a></p>
+                <p>Телефон: <a href="tel:+37064112831">+370 (641) 12 831</a></p>
+            </div>
         </main>
         <footer class="footer" id="footer">
             <div class="">
                 <a href="index.html" class="WebStudio WebStudio-header">
                     <span class="web">Kior</span> <span class="studio WebStudio-footer">Studio</span>
                 </a>
-                <p class="footer-address">м. Київ, пр-т Лесі Українки, 26</p>
+                <p class="footer-address">Kalvarijų gatvė 101
+                    LT-08219 Vilnius
+                    Литва</p>
                 <p class="footer-email">
                     <a href="mailto:pavelkior@icloud.com">pavelkior@icloud.com</a>
                 </p>
@@ -91,14 +102,14 @@
             </div>
             <div class="footer-media">
                 <div class="logos-icons">
-						<a href="https://www.instagram.com/alex_kior227/" class="instagram-logo">
-							<svg class="outer-circle" width="38" height="38" viewBox="0 0 38 38" xmlns="http://www.w3.org/2000/svg">
-								 <circle cx="19" cy="19" r="19" class="background-circle"/>
-								 <rect x="9" y="9" width="20" height="20" rx="4" ry="4" class="inner-square"/>
-								 <circle cx="19" cy="19" r="4" class="camera-lens"/>
-								 <circle cx="25" cy="13" r="1.5" class="flash"/>
-							</svg>
-					  </a>
+                    <a href="https://www.instagram.com/alex_kior227/" class="instagram-logo">
+                        <svg class="outer-circle" width="38" height="38" viewBox="0 0 38 38" xmlns="http://www.w3.org/2000/svg">
+                            <circle cx="19" cy="19" r="19" class="background-circle"/>
+                            <rect x="9" y="9" width="20" height="20" rx="4" ry="4" class="inner-square"/>
+                            <circle cx="19" cy="19" r="4" class="camera-lens"/>
+                            <circle cx="25" cy="13" r="1.5" class="flash"/>
+                        </svg>
+                    </a>
                     <a href="#" class="icon">f</a>
                     <a href="#" class="twitter-icon">X</a>
                     <a href="#" class="in-icon">in</a>
@@ -106,5 +117,6 @@
             </div>
         </footer>
         <script src="js/script.js"></script>
+    </div>
 </body>
 </html>
