@@ -49,10 +49,10 @@ body {
     padding: 0 -180px !important;
     max-width: 1200px;
     max-width: 100%;
-    display: flex;
+	 display: flex;
     position: relative;
-    flex-direction: column;
-    height: 100%;
+	 flex-direction: column;
+	 height: 100%;
 }
 
 /* ========================================================================================================= */
@@ -86,7 +86,7 @@ body {
 }
 
 .Studio-header {
-    margin-left: -5px;
+	margin-left: -5px;
     color: black !important;
 }
 
@@ -284,53 +284,53 @@ h4 {
 
 /* ========================================================================================================= */
 .logos-icons {
-    display: flex;
-    justify-content: space-around;
-    margin-bottom: 30px;
+	display: flex;
+	justify-content: space-around;
+	margin-bottom: 30px;
 }
 
 .instagram-logo .outer-circle {
-    transition: background 0.3s;
+	transition: background 0.3s;
 }
 
 .instagram-logo .background-circle {
-    fill: transparent;
-    transition: fill 0.3s;
+	fill: transparent;
+	transition: fill 0.3s;
 }
 
 .instagram-logo .inner-square {
-    fill: transparent;
-    stroke: #AFB1B8;
-    stroke-width: 2;
-    transition: stroke 0.3s;
+	fill: transparent;
+	stroke: #AFB1B8;
+	stroke-width: 2;
+	transition: stroke 0.3s;
 }
 
 .instagram-logo .camera-lens {
-    fill: transparent;
-    stroke: #AFB1B8;
-    stroke-width: 2;
-    transition: stroke 0.3s;
+	fill: transparent;
+	stroke: #AFB1B8;
+	stroke-width: 2;
+	transition: stroke 0.3s;
 }
 
 .instagram-logo .flash {
-    fill: #AFB1B8;
-    transition: fill 0.3s;
+	fill: #AFB1B8;
+	transition: fill 0.3s;
 }
 
 .instagram-logo:hover .background-circle {
-    fill: #1da1f2;
+	fill: #1da1f2;
 }
 
 .instagram-logo:hover .inner-square {
-    stroke: white;
+	stroke: white;
 }
 
 .instagram-logo:hover .camera-lens {
-    stroke: white;
+	stroke: white;
 }
 
 .instagram-logo:hover .flash {
-    fill: white;
+	fill: white;
 }
 
 
@@ -655,128 +655,129 @@ h4 {
 /* ========================================================================================================= */
 /* Медиа-запросы для адаптивного дизайна */
 @media (max-width: 1200px) {
-    .wraper {
-        margin: 0 5%;
-    }
+	.wraper {
+		 margin: 0 5%;
+	}
 
-    .header-all {
-        flex-direction: column;
-        align-items: center;
-    }
+	.header-all {
+		 flex-direction: column;
+		 align-items: center;
+	}
 
-    .header-contacts {
-        position: relative;
-        padding-top: 16px;
-    }
+	.header-contacts {
+		 position: relative;
+		 padding-top: 16px;
+	}
 
-    .block-one {
-        padding: 150px 20px;
-        font-size: 36px;
-    }
+	.block-one {
+		 padding: 150px 20px;
+		 font-size: 36px;
+	}
 
-    .columns {
-        flex-direction: column;
-        align-items: center;
-    }
+	.columns {
+		 flex-direction: column;
+		 align-items: center;
+	}
 
-    .columns p {
-        padding: 10px 0;
-    }
+	.columns p {
+		 padding: 10px 0;
+	}
 
-    .gallery-item {
-        margin-bottom: 30px;
-    }
+	.gallery-item {
+		 margin-bottom: 30px;
+	}
 
-    .team-members-container {
-        flex-direction: column;
-        align-items: center;
-    }
+	.team-members-container {
+		 flex-direction: column;
+		 align-items: center;
+	}
 
-    .team-member {
-        max-width: 90%;
-    }
+	.team-member {
+		 max-width: 90%;
+	}
 
-    .footer {
-        flex-direction: column;
-        align-items: center;
-    }
+	.footer {
+		 flex-direction: column;
+		 align-items: center;
+	}
 
-    .footer-media {
-        margin-left: 0;
-        margin-top: 20px;
-    }
+	.footer-media {
+		 margin-left: 0;
+		 margin-top: 20px;
+	}
 }
 
 @media (max-width: 768px) {
-    .header-all {
-        flex-direction: column;
-        padding: 16px 0;
-    }
+	.header-all {
+		 flex-direction: column;
+		 padding: 16px 0;
+	}
 
-    .block-one {
-        padding: 100px 20px;
-        font-size: 28px;
-    }
+	.block-one {
+		 padding: 100px 20px;
+		 font-size: 28px;
+	}
 
-    .grid-container {
-        grid-template-columns: repeat(2, minmax(0, 1fr));
-    }
+	.grid-container {
+		 grid-template-columns: repeat(2, minmax(0, 1fr));
+	}
 
-    .grid-item {
-        padding: 20px;
-    }
+	.grid-item {
+		 padding: 20px;
+	}
 }
 
 @media (max-width: 480px) {
-    .header-menu-items {
-        flex-direction: column;
-        align-items: center;
-    }
+	.header-menu-items {
+		 flex-direction: column;
+		 align-items: center;
+	}
 
-    .header-menu-items a {
-        margin-bottom: 10px;
-    }
+	.header-menu-items a {
+		 margin-bottom: 10px;
+	}
 
-    .block-one {
-        font-size: 24px;
-    }
+	.block-one {
+		 font-size: 24px;
+	}
 
-    .team-member {
-        max-width: 100%;
-    }
+	.team-member {
+		 max-width: 100%;
+	}
 }
 
 /* ========================================================================================================= */
 
 .footer {
-    display: flex;
-    margin-left: -180px;
-    margin-right: -180px;
-    padding-left: 180px;
-    background-color: #2F303A;
-    padding-top: 60px;
-    padding-bottom: 60px;
-    color: #FFFFFF;
-    margin-top: auto;
+	display: flex;
+	margin-left: -180px;
+	margin-right: -180px;
+	padding-left: 180px;
+	background-color: #2F303A;
+	padding-top: 60px;
+	padding-bottom: 60px;
+	color: #FFFFFF;
+	margin-top: auto;
 }
 
 .footer a {
-    color: #ACACB0;
-    text-decoration: none;
+	color: #ACACB0;
+	text-decoration: none;
 }
 
 .WebStudio-footer {
-    margin-left: -5px;
-    margin-bottom: 34px;
+  margin-left: -5px;
+	margin-bottom: 34px;
 }
 
 .footer-address,
 .footer-email,
 .footer-phone {
-    margin-bottom: 9px;
+	margin-bottom: 9px;
 }
 
 .footer-media {
-    margin-left: 93px;
-    max-width: 206px;
+	margin-left: 93px;
+	max-width: 206px;
 }
+
