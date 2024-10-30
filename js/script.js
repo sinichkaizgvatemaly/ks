@@ -1,3 +1,4 @@
+// Получаем элементы меню
 const menuItems = document.querySelectorAll('.header-menu-items a');
 
 // Функция для установки активной ссылки
@@ -55,5 +56,43 @@ menuItems.forEach(item => {
         if (this.getAttribute('href') !== '#') {
             window.location.href = this.href;
         }
-    });
+	 });
 });
+
+
+document.getElementById('orderForm').addEventListener('submit', function(event) {
+	event.preventDefault();
+
+	// Собираем данные формы
+	const formData = new FormData(this);
+
+	// Отправляем данные с помощью fetch
+	fetch('https://api.web3forms.com/submit', {
+		 method: 'POST',
+		 body: formData
+	})
+	.then(response => response.json())
+	.then(data => {
+		 if (data.success) {
+			  document.getElementById('responseMessage').textContent = 'Форма успешно отправлена!';
+			  this.reset(); // очищаем форму
+
+			  // Показываем анимацию "ГОТОВО"
+			  const successMessage = document.getElementById('successMessage');
+			  successMessage.classList.add('show');
+
+			  // Устанавливаем таймер для закрытия анимации и модального окна
+			  setTimeout(() => {
+					successMessage.classList.remove('show'); // скрываем сообщение "ГОТОВО"
+					document.getElementById("myModal").style.display = "none"; // закрываем модальное окно
+			  }, 111500); //  секунды для завершения анимации
+		 } else {
+			  document.getElementById('responseMessage').textContent = 'Ошибка отправки формы.';
+		 }
+	})
+	.catch(error => {
+		 document.getElementById('responseMessage').textContent = 'Произошла ошибка: ' + error.message;
+	});
+});
+
+
