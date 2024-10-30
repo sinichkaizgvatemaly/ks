@@ -85,7 +85,7 @@ document.getElementById('orderForm').addEventListener('submit', function(event) 
 			  setTimeout(() => {
 					successMessage.classList.remove('show'); // скрываем сообщение "ГОТОВО"
 					document.getElementById("myModal").style.display = "none"; // закрываем модальное окно
-			  }, 111500); //  секунды для завершения анимации
+			  }, 500); //  секунды для завершения анимации
 		 } else {
 			  document.getElementById('responseMessage').textContent = 'Ошибка отправки формы.';
 		 }
