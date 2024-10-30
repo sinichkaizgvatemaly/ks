@@ -653,97 +653,25 @@ h4 {
 }
 
 /* ========================================================================================================= */
-/* Медиа-запросы для адаптивного дизайна */
-@media (max-width: 1200px) {
-	.wraper {
-		 margin: 0 5%;
-	}
-
-	.header-all {
-		 flex-direction: column;
-		 align-items: center;
-	}
-
-	.header-contacts {
-		 position: relative;
-		 padding-top: 16px;
-	}
-
-	.block-one {
-		 padding: 150px 20px;
-		 font-size: 36px;
-	}
-
-	.columns {
-		 flex-direction: column;
-		 align-items: center;
-	}
-
-	.columns p {
-		 padding: 10px 0;
-	}
-
-	.gallery-item {
-		 margin-bottom: 30px;
-	}
-
-	.team-members-container {
-		 flex-direction: column;
-		 align-items: center;
-	}
-
-	.team-member {
-		 max-width: 90%;
-	}
-
-	.footer {
-		 flex-direction: column;
-		 align-items: center;
-	}
-
-	.footer-media {
-		 margin-left: 0;
-		 margin-top: 20px;
-	}
+#successMessage {
+	display: none;
+	position: fixed;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	background-color: #2381CC;
+	color: white;
+	padding: 20px;
+	border-radius: 5px;
+	font-size: 1.5em;
+	opacity: 0;
+	transition: opacity 0.5s ease-in-out, transform 0.5s ease-in-out;
 }
 
-@media (max-width: 768px) {
-	.header-all {
-		 flex-direction: column;
-		 padding: 16px 0;
-	}
-
-	.block-one {
-		 padding: 100px 20px;
-		 font-size: 28px;
-	}
-
-	.grid-container {
-		 grid-template-columns: repeat(2, minmax(0, 1fr));
-	}
-
-	.grid-item {
-		 padding: 20px;
-	}
-}
-
-@media (max-width: 480px) {
-	.header-menu-items {
-		 flex-direction: column;
-		 align-items: center;
-	}
-
-	.header-menu-items a {
-		 margin-bottom: 10px;
-	}
-
-	.block-one {
-		 font-size: 24px;
-	}
-
-	.team-member {
-		 max-width: 100%;
-	}
+#successMessage.show {
+	display: block;
+	opacity: 1;
+	transform: translate(-50%, -50%) scale(1.1);
 }
 
 /* ========================================================================================================= */
