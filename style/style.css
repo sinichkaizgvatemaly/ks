@@ -44,10 +44,8 @@ body {
 
 /* ========================================================================================================= */
 .wraper {
-
     margin: 0 180px !important;
     padding: 0 -180px !important;
-    max-width: 1200px;
     max-width: 100%;
 	 display: flex;
     position: relative;
@@ -143,10 +141,7 @@ body {
 .block-one {
     text-align: center;
     justify-content: center;
-    padding-top: 213px;
-    padding-bottom: 58px;
-    padding-left: 46px;
-    padding-right: 46px;
+	 padding: 213px 46px 58px 46px;
     line-height: 60px;
     color: white;
     font-family: 'Roboto', sans-serif;
@@ -178,6 +173,7 @@ body {
 }
 
 .column-img-wrapper {
+	
     margin-bottom: 30px;
     padding: 25px 100px;
     background-color: #F5F4FB;
@@ -868,83 +864,144 @@ textarea {
 
 
 
-/* ========================================================================================================= */
-@media (max-width: 768px) {
-	/* Убираем отступы и внутренние отступы для большинства элементов */
-	.wraper{
+/* ========================================================================================================= */@media (max-width: 768px) {
+	.wraper {
 		height: 100%;
 		width: 100%;
-		padding: 0px 15px!important;
-		margin: 0px!important;
+		margin: 0 15px!important;
 		position: relative;
-
 	}
+
 	.header {
 		align-items: flex-start;
-  }
+	}
 
-  .header-all {
-	flex-direction: column; /* Вертикальное расположение */
-	align-items: center; /* Центрируем содержимое */
-}
-.burger {
-	display: flex; /* Показываем бургер-меню на мобильных устройствах */
-	flex-direction: column; /* Вертикальное расположение линий */
-	cursor: pointer; /* Указатель при наведении */
-}
-.line {
-	height: 3px; /* Высота линий */
-	width: 30px; /* Ширина линий */
-	background-color: black; /* Цвет линий */
-	margin: 3px 0; /* Отступ между линиями */
-}
-.header-menu-items {
-	display: none; /* Скрываем меню по умолчанию для мобильных устройств */
-}
-.columns , .main{
-	width: 100%;
-}
-.block-one {
+	.header-all {
+		flex-direction: column; /* Вертикальное расположение */
+		align-items: center; /* Центрируем содержимое */
+	}
 
+	.burger {
+		display: flex; /* Показываем бургер-меню на мобильных устройствах */
+		flex-direction: column; /* Вертикальное расположение линий */
+		cursor: pointer; /* Указатель при наведении */
+	}
 
+	.line {
+		height: 3px; /* Высота линий */
+		width: 30px; /* Ширина линий */
+		background-color: black; /* Цвет линий */
+		margin: 3px 0; /* Отступ между линиями */
+	}
+
+	.header-menu-items {
+		display: none; /* Скрываем меню по умолчанию для мобильных устройств */
+	}
+
+	.columns,
+	.main,
+	.block-one,
+	.footer {
+		width: 100%;
+	}
+
+	.block-one,
+	.footer {
+		margin: 0 -15px; /* Убираем отступы */
+	}
+
+	.custom-line {
+		display: none;
+	}
+
+	.block-one h1 {
+		font-size: 26px; /* Устанавливает размер шрифта в 26 пикселей */
+	}
+
+	h2 {
+		font-size: 28px;
+	}
+
+	.team-members {
+		padding: 0; /* Убираем отступы */
+		margin: 0; /* Убираем отступы */
+		display: flex; /* Используем flexbox для центрирования */
+		flex-direction: column; /* Вертикальное направление */
+		align-items: center; /* Центрируем по горизонтали */
+	}
+
+	.team-members-container {
+		display: grid;
+		grid-template-columns: 1fr; /* Одна колонка */
+		gap: 40px; /* Расстояние между team-member */
+		max-width: 100%;
+	}
+
+	.team-member {
+		background: #f9f9f9; /* Цвет фона для наглядности */
+		padding: 20px; /* Внутренние отступы */
+		border-radius: 10px; /* Закругление углов */
+		box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+		max-width: 100%;
+		text-align: center;
+	}
+
+	.team-member img {
+		max-height: 100%;
+		width: auto; /* Адаптивная ширина */
+		margin-bottom: 15px; /* Отступ между изображением и текстом */
+	}
+
+	.services {
+		display: none; /* Скрываем секцию услуг */
+	}
+
+	.partners-section {
+		padding: 0; /* Убираем отступы */
+	}
+
+	.button-container {
+		display: grid;
+		grid-template-columns: repeat(3, 1fr); /* Задаем 3 колонки */
+		grid-template-rows: auto auto; /* Задаем 2 строки */
+		width: 100%;
+		gap: 15px 8px; /* Горизонтальное и вертикальное расстояние */
+		margin-top: 60px; /* Отступ сверху */
+		margin-bottom: 40px; /* Отступ снизу */
+	}
+
+	.partners-grid {
+		display: grid;
+		grid-template-columns: repeat(3, 1fr); /* Задаем 3 колонки */
+		margin: 0;
+	}
+
+	.category-button {
+		padding: 13px 22px; /* Отступы для кнопок категории */
+	}
+
+	.grid-container {
+		display: flex;
+		flex-direction: column; /* Вертикальное направление */
+		margin-bottom: 60px; /* Отступ снизу */
+	}
+
+	.column-img-wrapper {
+		display: flex;
+		justify-content: center; /* Центрируем по горизонтали */
+		align-items: center; /* Центрируем по вертикали */
+		margin-right: 15px; /* Отступ справа */
+		max-width: 430px; /* Максимальная ширина */
+		max-height: 120px; /* Максимальная высота */
+		position: relative; /* Относительное позиционирование */
+	}
+
+	.column-img {
+		text-align: center; /* Центрируем текст */
+		max-width: 100%; /* Адаптивная ширина */
+		height: auto; /* Автоматическая высота */
+	}
+	.columns , .footer{
+		display: none;
+	}
 }
-.custom-line{
-	display: none;
-}
-.block-one h1 {
-	font-size: 26px; /* Устанавливает размер шрифта в 26 пикселей */
-}
-h2{
-	font-size: 28px;
-}
-.team-members , .footer , .block-one{
-	padding: 0;
-margin: 0;
-}
-
-
-.columns , .service-gallery , .team-members-container{
-	flex-direction: column;
-}
-.team-member{
-
-}
-.partners-section{
-	padding: 0;
-}
-.partners-grid{
-
-	display: grid;
-    grid-template-columns: repeat(2, 1fr); /* 3 столбца с равной шириной */
-    grid-template-rows: repeat(3, 1fr);    /* 2 ряда с равной высотой */
-    gap: 10px;                             /* Промежуток между элементами */
-    width: 100%;                           /* Ширина контейнера */   
-
-}
-}
-  
-
-
-
-
-
