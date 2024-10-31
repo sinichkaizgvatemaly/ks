@@ -3,8 +3,6 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
-    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
-    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
     <link rel="manifest" href="/site.webmanifest">
     <title>Web Studio</title>
     <link href="https://fonts.googleapis.com/css?family=Raleway:600" rel="stylesheet" />
@@ -13,27 +11,34 @@
 </head>
 <body>
     <div class="wraper">
-        <header class="header" id="header">
-            <div class="header-all">
-                <a href="index.html" class="WebStudio WebStudio-header">
-                    <span class="web">Kior</span> <span class="studio Studio-header">Studio</span>
-                </a>
-                <div class="header-menu-items">
-                    <a href="index.html" class="header-menu-studia">Студія</a>
-                    <a href="studia.html" class="header-menu-portfolio">Портфоліо</a>
-                    <a href="contacts.html" class="header-menu-contacts">Контакти</a>
-                </div>
-                <div class="header-contacts">
-                    <p>
-                        <a href="mailto:pavelkior@icloud.com">pavelkior@icloud.com</a>
-                    </p>
-                    <p>
-                        <a href="tel:+37064112831">+370 (641) 12 831</a>
-                    </p>
-                </div>
-            </div>
-            <hr class="custom-line">
-        </header>
+		<header class="header" id="header">
+			<div class="header-all">
+				 <a href="index.html" class="WebStudio WebStudio-header">
+					  <span class="web">Kior</span> <span class="studio Studio-header">Studio</span>
+				 </a>
+				 <div class="header-menu-items">
+					  <a href="index.html" class="header-menu-studia">Студія</a>
+					  <a href="studia.html" class="header-menu-portfolio">Портфоліо</a>
+					  <a href="contacts.html" class="header-menu-contacts">Контакти</a>
+				 </div>
+				 <div class="header-contacts">
+					  <p>
+							<a href="mailto:pavelkior@icloud.com">pavelkior@icloud.com</a>
+					  </p>
+					  <p>
+							<a href="tel:+37064112831">+370 (641) 12 831</a>
+					  </p>
+				 </div>
+			</div>
+			<div class="burger" id="burger">
+				 <div class="line"></div>
+				 <div class="line"></div>
+				 <div class="line"></div>
+			</div>
+			<hr class="custom-line">
+	  </header>
+	  
+	  
         <main class="main" id="main">
 			<section class="block-one" id="block-one">
 				<h1>Ефективні рішення для<br>
@@ -49,28 +54,55 @@
 		  <div id="myModal" class="modal">
 			<div class="modal-content">
 				 <span class="close">&times;</span>
-				 <h2>Ваше замовлення</h2>
-				 <form id="orderForm"> <!-- Изменено на id="orderForm" -->
-					<input type="hidden" name="access_key" value="982fa74b-2076-484d-b29b-78da8a8ca897">
-					<label class="label-modal" for="fullName">Ім'я:</label>
-					<input type="text" id="fullName" name="fullName" required placeholder="Ім'я">
-			  
-					<label class="label-modal" for="email">Електронна пошта:</label>
-					<input type="email" id="email" name="email" required placeholder="your@email.com">
-			  
-					<label class="label-modal" for="phone">Номер телефону:</label>
-					<input type="tel" id="phone" name="phone" required placeholder="+380 (xx) xxx xx xx">
-			  
-					<label class="label-modal" for="comment">Коментар:</label>
-					<textarea id="comment" name="comment" rows="4" placeholder="Ваш коментар"></textarea>
-			  
-					<button class="category-button" type="submit">Відправити</button>
-			  </form>
-			  <div id="successMessage">Done!</div>
-			  <p id="responseMessage"></p>
-			  
+				 <h2>Залиште свої дані, ми вам передзвонимо</h2>
+	  
+				 <form id="orderForm">
+					  <input type="hidden" name="access_key" value="982fa74b-2076-484d-b29b-78da8a8ca897">
+	  
+					  <div class="input-container">
+							<label class="label-modal" for="fullName">Ім'я:</label>
+							<div class="image-container">
+								 <img class="modal-img" src="img/modal/Vectorman.png" alt="man">
+							</div>
+							<input type="text" id="fullName" name="fullName" required>
+					  </div>
+	  
+					  <div class="input-container">
+							<label class="label-modal" for="phone">Телефон:</label>
+							<div class="image-container">
+								 <img class="modal-img" src="img/modal/Vectorph.png" alt="phone">
+							</div>
+							<input type="tel" id="phone" name="phone" required>
+					  </div>
+	  
+					  <div class="input-container">
+							<label class="label-modal" for="email">Пошта:</label>
+							<div class="image-container">
+							
+								 <img class="modal-img" src="img/modal/Vectoremail.png" alt="email">
+							</div>
+							<input type="email" id="email" name="email">
+					  </div>
+	  
+					  <div class="input-container input-container-coment">
+							<label class="label-modal" for="comment">Коментар:</label>
+							<textarea id="comment" name="comment" rows="4" placeholder="Введіть текст"></textarea>
+					  </div>
+	  
+					  <label class="checkbox-label">
+							<input type="checkbox" id="agreement" name="agreement" required>
+							Погоджуюся з розсилкою та приймаю&nbsp;
+							<a class="checkbox-agreement" href="#terms" target="_blank"> Умови договору</a>
+					  </label>
+	  
+					  <button class="category-button category-button-modal" type="submit">Відправити</button>
+				 </form>
+	  
+				 <div id="successMessage">Done!</div>
+				 <p id="responseMessage"></p>
 			</div>
 	  </div>
+	  
 	  
 
 
@@ -95,41 +127,41 @@
 
 
 
-            <section class="columns">
-                <div class="column">
-                    <div class="column-img-wrapper">
-                        <img class="column-img" src="img/column-img/column-img1.png" alt="Изображение 1" height="70" width="70">
-                    </div>
-                    <h3>УВАГА ДО ДЕТАЛЕЙ</h3>
-                    <p>Ідейні міркування, і навіть початок<br>
-                        повсякденної роботи з формування<br> позиції.</p>
-                </div>
-                <div class="column">
-                    <div class="column-img-wrapper">
-                        <img class="column-img" src="img/column-img/column-img2.png" alt="Изображение 1" height="70" width="70">
-                    </div>
-                    <h3>ПУНКТУАЛЬНІСТЬ</h3>
-                    <p>Завдання організації, особливо рамки<br>
-                        і місце навчання кадрів тягне у себе.</p>
-                </div>
-                <div class="column">
-                    <div class="column-img-wrapper">
-                        <img class="column-img" src="img/column-img/column-img3.png" alt="Изображение 1" height="70" width="70">
-                    </div>
-                    <h3>ПЛАНУВАННЯ</h3>
-                    <p>Так само консультація з широким<br>
-                        активом значною мірою зумовлює.</p>
-                </div>
-                <div class="column">
-                    <div class="column-img-wrapper">
-                        <img class="column-img" src="img/column-img/column-img4.png" alt="Изображение 1" height="70" width="70">
-                    </div>
-                    <h3>СУЧАСНІ ТЕХНОЛОГІЇ</h3>
-                    <p>Значимість цих проблем настільки<br>
-                        очевидна, що реалізація планових<br>
-                        завдань.</p>
-                </div>
-            </section>
+	  <section class="columns">
+		<div class="column">
+			 <div class="column-img-wrapper">
+				  <img class="column-img" src="img/column-img/column-img1.png" alt="Изображение 1" height="70" width="70">
+			 </div>
+			 <h3>УВАГА ДО ДЕТАЛЕЙ</h3>
+			 <p>Ідейні міркування, і навіть початок<br>
+				  повсякденної роботи з формування<br> позиції.</p>
+		</div>
+		<div class="column">
+			 <div class="column-img-wrapper">
+				  <img class="column-img" src="img/column-img/column-img2.png" alt="Изображение 1" height="70" width="70">
+			 </div>
+			 <h3>ПУНКТУАЛЬНІСТЬ</h3>
+			 <p>Завдання організації, особливо рамки<br>
+				  і місце навчання кадрів тягне у себе.</p>
+		</div>
+		<div class="column">
+			 <div class="column-img-wrapper">
+				  <img class="column-img" src="img/column-img/column-img3.png" alt="Изображение 1" height="70" width="70">
+			 </div>
+			 <h3>ПЛАНУВАННЯ</h3>
+			 <p>Так само консультація з широким<br>
+				  активом значною мірою зумовлює.</p>
+		</div>
+		<div class="column">
+			 <div class="column-img-wrapper">
+				  <img class="column-img" src="img/column-img/column-img4.png" alt="Изображение 1" height="70" width="70">
+			 </div>
+			 <h3>СУЧАСНІ ТЕХНОЛОГІЇ</h3>
+			 <p>Значимість цих проблем настільки<br>
+				  очевидна, що реалізація планових<br>
+				  завдань.</p>
+		</div>
+  </section>
             <section class="services" id="services">
                 <h2>Чим ми займаємося</h2>
                 <div class="service-gallery">
