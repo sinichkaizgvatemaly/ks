@@ -427,6 +427,9 @@ h4 {
 /* ========================================================================================================= */
 
 /* ========================================================================================================= */
+.burger{
+	display: none;
+}
 
 .header-menu-items {
     position: relative;
@@ -712,59 +715,63 @@ h4 {
 
 /* ========================================================================================================= */
 .modal {
+	font-family: 'Roboto', sans-serif; /* Шрифт Roboto */
 	display: none; /* Скрыто по умолчанию */
 	position: fixed; /* Фиксированное позиционирование */
-	z-index: 1; /* Ставим выше других элементов */
-	left: 50%; /* Сдвигаем на 50% от левого края */
-	top: 50%; /* Сдвигаем на 50% от верхнего края */
-	transform: translate(-50%, -50%); /* Сдвигаем на половину ширины и высоты, чтобы центрировать */
-	max-width: 500px; /* Максимальная ширина */
-	max-height: 500px; /* Максимальная высота */
-	width: 90%; /* Ширина 90% от экрана, чтобы быть адаптивным */
-	height: auto; /* Высота автоматически подстраивается под содержимое */
-	font-size: 20px;
-	font-weight: bold;
-
+	z-index: 100; /* Ставим выше других элементов */
+	left: 0; /* Отступ слева */
+	top: 0; /* Отступ сверху */
+	width: 100%; /* Полная ширина */
+	height: 100%; /* Полная высота */
+	background-color: rgba(0, 0, 0, 0.5); /* Серый фон с прозрачностью */
+	overflow: hidden; /* Отключаем прокрутку */
 }
-.label-modal{
-	text-align: left; /* Выравниваем текст по левому краю */
-    margin-top: 10px; /* Отступ сверху */
+
+.label-modal {
+	display: block; /* Блочный элемент */
+	margin-bottom: 4px; /* Отступ снизу */
 }
 
 .modal-content {
+	max-width: 450px; /* Максимальная ширина */
+	max-height: 609px; /* Максимальная высота */
 	display: flex;
-	flex-direction: column;
-	padding: 20px; /* Отступы внутри формы */
-	color: white;
-	border-radius: 10px;
-	background-color: #2F303A;
-	padding: 20px;
-	border: 1px solid #888;
-	width: 80%;
-	animation: slide-in 0.5s ease;
-	position: relative;
+	flex-direction: column; /* Вертикальное выравнивание содержимого */
+	padding: 40px; /* Внутренний отступ */
+	color: #757575; /* Цвет текста */
+	border-radius: 4px; /* Закругленные углы */
+	background-color: #fff; /* Цвет фона */
+	animation: slide-in 0.5s ease; /* Анимация появления */
+	position: absolute; /* Изменено на абсолютное позиционирование*/
+	top: 50%; /* Позиционируем от верхней части окна */
+	left: 50%; /* Позиционируем от левой части окна */
+	transform: translate(-50%, -50%); /* Центрируем по середине */
 }
 
-
-
-
-
-input[type="text"],
-input[type="email"],
-input[type="tel"],
-textarea {
-    width: 100%; /* Полная ширина */
-    padding: 10px; /* Отступ внутри полей */
-    margin-top: 5px; /* Отступ сверху */
-    border: 1px solid #ccc; /* Цвет границы */
-    border-radius: 4px; /* Закругленные углы */
+@keyframes slide-in {
+	from {
+		 transform: translate(-50%, -50%) translateY(-50px); /* Начальная позиция */
+		 opacity: 0; /* Прозрачность */
+	}
+	to {
+		 transform: translate(-50%, -50%); /* Конечная позиция */
+		 opacity: 1; /* Полная непрозрачность */
+	}
 }
 
 .close {
-	color: white;
-	float: right;
-	font-size: 28px;
-	font-weight: bold;
+	color: black;
+	font-size: 24px;
+	font-weight: 400;
+	width: 30px;
+	height: 30px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	border-radius: 50%;
+	background-color: #FFFFFF; 
+	border: 1px solid #ccc;
+	cursor: pointer;
 	position: absolute;
 	top: 10px;
 	right: 15px;
@@ -772,8 +779,172 @@ textarea {
 
 .close:hover,
 .close:focus {
-	color: #2196F3;
-	text-decoration: none;
-	cursor: pointer;
+	color: #2196F3; /* Цвет текста при наведении */
 }
+
+.modal-content h2 {
+	color: #000; /* Цвет текста */
+	font-weight: bold; /* Жирный шрифт */
+	font-size: 20px; /* Размер шрифта */
+	margin-bottom: 20px; /* Отступ снизу */
+	display: flex; /* Используем Flexbox для центровки */
+	justify-content: center; /* Центрируем содержимое по горизонтали */
+	text-align: center; 
+}
+
+.label-modal, .checkbox-label, a {
+	color: #757575;
+	font-size: 12px;
+}
+
+.checkbox-agreement {
+	color: #2196F3;
+}
+
+.category-button-modal { 
+	margin: 35px auto 40px; /* Отступ сверху 35px, снизу 40px, авто по бокам */
+	display: flex; /* Используем Flexbox */
+	justify-content: center; /* Центрируем содержимое */
+}
+
+.checkbox-label {
+	display: flex; /* Гибкое расположение */
+	align-items: center; /* Вертикальное выравнивание */
+	margin-bottom: 15px; /* Отступ снизу */
+}
+
+input[type="text"],
+input[type="email"],
+input[type="tel"],
+textarea {
+	width: 100%; /* Полная ширина */
+	height: 39px;
+	border: 1px solid #ccc; /* Цвет границы */
+	border-radius: 4px; /* Закругленные углы */
+}
+
+.input-container {
+	position: relative;
+	margin-bottom: 10px; /* Отступ снизу */
+}
+.input-container input:focus {
+	border-color: #2196F3; /* Цвет границы при фокусе */
+	outline: none; /* Убирает стандартный обвод */
+}
+.input-container:focus-within .modal-img {
+	filter: brightness(0) saturate(100%) invert(50%) sepia(100%) saturate(200%) hue-rotate(170deg); /* Изменяет цвет изображения */
+}
+
+.input-container input, 
+.input-container textarea {
+	padding-left: 30px; /* Отступ слева, чтобы текст не перекрывал изображение */
+	width: 100%; /* Ширина 100%, чтобы занимать весь доступный пространство */
+	box-sizing: border-box; /* Учитываем padding в ширине элемента */
+}
+
+.image-container {
+	position: absolute;
+	top: 67%;
+	left: 10px;
+	transform: translateY(-50%);
+}
+
+.modal-img {
+	width: 18px;
+	height: auto;
+}
+.input-container-coment{
+	min-height: 138px;
+}
+.input-container-coment textarea {
+	font-family: 'roboto';
+	font-size: 12px;
+	width: 100%; /* Занимает всю ширину */
+	height: 100%; /* Занимает всю высоту контейнера */
+	padding: 16px; /* Внутренний отступ */
+	box-sizing: border-box;
+	resize: none;
+}
+
+
+
 /* ========================================================================================================= */
+@media (max-width: 768px) {
+	/* Убираем отступы и внутренние отступы для большинства элементов */
+	.wraper{
+		height: 100%;
+		width: 100%;
+		padding: 0px 15px!important;
+		margin: 0px!important;
+		position: relative;
+
+	}
+	.header {
+		align-items: flex-start;
+  }
+
+  .header-all {
+	flex-direction: column; /* Вертикальное расположение */
+	align-items: center; /* Центрируем содержимое */
+}
+.burger {
+	display: flex; /* Показываем бургер-меню на мобильных устройствах */
+	flex-direction: column; /* Вертикальное расположение линий */
+	cursor: pointer; /* Указатель при наведении */
+}
+.line {
+	height: 3px; /* Высота линий */
+	width: 30px; /* Ширина линий */
+	background-color: black; /* Цвет линий */
+	margin: 3px 0; /* Отступ между линиями */
+}
+.header-menu-items {
+	display: none; /* Скрываем меню по умолчанию для мобильных устройств */
+}
+.columns , .main{
+	width: 100%;
+}
+.block-one {
+
+
+}
+.custom-line{
+	display: none;
+}
+.block-one h1 {
+	font-size: 26px; /* Устанавливает размер шрифта в 26 пикселей */
+}
+h2{
+	font-size: 28px;
+}
+.team-members , .footer , .block-one{
+	padding: 0;
+margin: 0;
+}
+
+
+.columns , .service-gallery , .team-members-container{
+	flex-direction: column;
+}
+.team-member{
+
+}
+.partners-section{
+	padding: 0;
+}
+.partners-grid{
+
+	display: grid;
+    grid-template-columns: repeat(2, 1fr); /* 3 столбца с равной шириной */
+    grid-template-rows: repeat(3, 1fr);    /* 2 ряда с равной высотой */
+    gap: 10px;                             /* Промежуток между элементами */
+    width: 100%;                           /* Ширина контейнера */   
+
+}
+}
+  
+
+
+
+
+
