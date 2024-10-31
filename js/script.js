@@ -18,13 +18,13 @@ function setActiveLink() {
 setActiveLink();
 
 // Получаем модальное окно
-var modal = document.getElementById("myModal");
+let modal = document.getElementById("myModal");
 
 // Получаем кнопку, которая открывает модальное окно
-var btn = document.getElementById("openModal");
+let btn = document.getElementById("openModal");
 
 // Получаем элемент <span>, который закрывает модальное окно
-var span = document.getElementsByClassName("close")[0];
+let span = document.getElementsByClassName("close")[0];
 
 // Добавляем обработчик клика для кнопки открытия модального окна
 btn.onclick = function(event) {
@@ -85,7 +85,7 @@ document.getElementById('orderForm').addEventListener('submit', function(event) 
 			  setTimeout(() => {
 					successMessage.classList.remove('show'); // скрываем сообщение "ГОТОВО"
 					document.getElementById("myModal").style.display = "none"; // закрываем модальное окно
-			  }, 500); //  секунды для завершения анимации
+			  }, 111500); //  секунды для завершения анимации
 		 } else {
 			  document.getElementById('responseMessage').textContent = 'Ошибка отправки формы.';
 		 }
@@ -94,5 +94,11 @@ document.getElementById('orderForm').addEventListener('submit', function(event) 
 		 document.getElementById('responseMessage').textContent = 'Произошла ошибка: ' + error.message;
 	});
 });
+const burger = document.getElementById('burger');
+const menuList = document.getElementById('header-menu-items');
+burger.onclick = () => {
+	headerMenuItems.classList.toggle('active');
+	 burger.classList.toggle('active');
+};
 
 
