@@ -1,122 +1,1007 @@
-<!DOCTYPE html>
-<html lang="ru">
-<head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
-    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
-    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
-    <link rel="manifest" href="/site.webmanifest">
-    <title>Contacts Web Studio</title>
-    <link href="https://fonts.googleapis.com/css?family=Raleway:600" rel="stylesheet" />
-    <link href="https://fonts.googleapis.com/css?family=Roboto:100,100italic,300,300italic,regular,italic,500,500italic,700,700italic,900,900italic" rel="stylesheet" />
-    <link rel="stylesheet" href="style/style.css" />
-    <style>
-        .bg {
-            fill: #2F303A; /* Цвет фона */
-        }
-        .shape {
-            fill: #2196F3; /* Цвет фигуры */
-        }
-        .text {
-            fill: #ACACB0; /* Цвет текста */
-            font-family: 'Arial, sans-serif';
-            font-size: 24px;
-            font-weight: bold;
-        }
-        h1 {
-            text-align: center;
-        }
-        .contact-info {
-            margin: 20px 0;
-            padding: 15px;
-            background-color: #fff;
-            border-radius: 5px;
-            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-        }
-        .contact-info p {
-            margin: 8px 0;
-            font-size: 16px;
-        }
-        .contact-info a {
-            color: #2196F3;
-            text-decoration: none;
-        }
-        .contact-info a:hover {
-            text-decoration: underline;
-        }
-    </style>
-</head>
-<body>
-    <div class="wraper">
-        <header class="header" id="header">
-            <div class="header-all">
-                <a href="index.html" class="WebStudio WebStudio-header">
-                    <span class="web">Kior</span> <span class="studio Studio-header">Studio</span>
-                </a>
-                <div class="header-menu-items">
-                    <a href="index.html" class="header-menu-studia">Студія</a>
-                    <a href="studia.html" class="header-menu-portfolio">Портфоліо</a>
-                    <a href="contacts.html" class="header-menu-contacts">Контакти</a>
-                </div>
-                <div class="header-contacts">
-                    <p>
-                        <a href="mailto:pavelkior@icloud.com">pavelkior@icloud.com</a>
-                    </p>
-                    <p>
-                        <a href="tel:+37064112831">+370 (641) 12 831</a>
-                    </p>
-                </div>
-            </div>
-            <hr class="custom-line">
-        </header>
-        <main class="main" id="main">
-            <svg width="200" height="100" xmlns="http://www.w3.org/2000/svg">
-                <rect width="100%" height="100%" fill="#F8F9FA"/> <!-- Фоновый цвет -->
-                <circle cx="50" cy="50" r="40" class="shape"/>
-                <rect x="100" y="30" width="80" height="40" fill="#6C757D" rx="10" /> <!-- Прямоугольник -->
-                <text x="140" y="55" class="text" text-anchor="middle">Kior Studio</text>
-            </svg>
-            <div class="contact-info">
-                <p>Kalvarijų gatvė 101
-                    LT-08219 Vilnius
-                    Литва</p>
-                <p>Email: <a href="mailto:pavelkior@icloud.com">pavelkior@icloud.com</a></p>
-                <p>Телефон: <a href="tel:+37064112831">+370 (641) 12 831</a></p>
-            </div>
-        </main>
-        <footer class="footer" id="footer">
-            <div class="">
-                <a href="index.html" class="WebStudio WebStudio-header">
-                    <span class="web">Kior</span> <span class="studio WebStudio-footer">Studio</span>
-                </a>
-                <p class="footer-address">Kalvarijų gatvė 101
-                    LT-08219 Vilnius
-                    Литва</p>
-                <p class="footer-email">
-                    <a href="mailto:pavelkior@icloud.com">pavelkior@icloud.com</a>
-                </p>
-                <p class="footer-phone">
-                    <a href="tel:+37064112831">+370 (641) 12 831</a>
-                </p>
-            </div>
-            <div class="footer-media">
-                <div class="logos-icons">
-                    <a href="https://www.instagram.com/alex_kior227/" class="instagram-logo">
-                        <svg class="outer-circle" width="38" height="38" viewBox="0 0 38 38" xmlns="http://www.w3.org/2000/svg">
-                            <circle cx="19" cy="19" r="19" class="background-circle"/>
-                            <rect x="9" y="9" width="20" height="20" rx="4" ry="4" class="inner-square"/>
-                            <circle cx="19" cy="19" r="4" class="camera-lens"/>
-                            <circle cx="25" cy="13" r="1.5" class="flash"/>
-                        </svg>
-                    </a>
-                    <a href="#" class="icon">f</a>
-                    <a href="#" class="twitter-icon">X</a>
-                    <a href="#" class="in-icon">in</a>
-                </div>
-            </div>
-        </footer>
-        <script src="js/script.js"></script>
-    </div>
-</body>
-</html>
+*,
+*::before,
+*::after {
+    padding: 0;
+    margin: 0;
+    border: 0;
+    box-sizing: border-box;
+}
+
+a {
+    text-decoration: none;
+}
+
+ul,
+ol,
+li {
+    list-style: none;
+}
+
+img {
+    vertical-align: top;
+    display: block;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-weight: inherit;
+    font-size: inherit;
+}
+
+html,
+body {
+    height: 100%;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    width: 100%;
+}
+
+/* ========================================================================================================= */
+.wraper {
+    margin: 0 180px !important;
+    padding: 0 -180px !important;
+    max-width: 100%;
+	 display: flex;
+    position: relative;
+	 flex-direction: column;
+	 height: 100%;
+}
+
+/* ========================================================================================================= */
+.header-all {
+    display: flex;
+    padding-top: 32px;
+    padding-bottom: 32px;
+    font-family: 'Roboto';
+    font-size: 14px;
+    font-weight: 500;
+}
+
+.header-all>div {
+    display: flex;
+}
+
+.custom-line {
+    border: none;
+    height: 2px;
+    background-color: #ECECEC;
+    margin: 0 -180px 0 -180px;
+}
+
+.WebStudio {
+
+    font-weight: bold;
+    margin-right: 93px;
+    cursor: pointer;
+    font-size: 26px;
+    font-family: 'Raleway';
+}
+
+.Studio-header {
+	margin-left: -5px;
+    color: black !important;
+}
+
+.web {
+    color: #2196F3;
+}
+
+.studio {
+    color: white;
+}
+
+.header-menu-items {
+    font-size: 14px;
+    cursor: pointer;
+    padding-top: 6px;
+}
+
+.header-menu-studia:hover,
+.header-menu-portfolio:hover,
+.header-menu-contacts:hover {
+    color: #2196F3;
+}
+
+.header-contacts {
+    padding-top: 6px;
+    right: 0;
+    position: absolute;
+}
+
+.header-contacts p {
+    margin-left: 33px;
+}
+
+.header-contacts a {
+    color: #757575;
+    text-decoration: none;
+}
+
+.header-contacts a:hover {
+    color: #2196F3;
+
+}
+
+.header-menu-items>div:not(:last-child) {
+    margin-right: 33px;
+}
+
+.header-menu-items a {
+    margin-right: 33px;
+    color: black;
+}
+
+/* ========================================================================================================= */
+.block-one {
+    text-align: center;
+    justify-content: center;
+	 padding: 213px 46px 58px 46px;
+    line-height: 60px;
+    color: white;
+    font-family: 'Roboto', sans-serif;
+    font-size: 44px;
+    font-weight: bold;
+    background-image: url(../img/bgi.png);
+    max-height: 600px;
+    margin-left: -180px;
+    margin-right: -180px;
+}
+
+/* ========================================================================================================= */
+.columns {
+    display: flex;
+    justify-content: space-between;
+    font-family: 'Roboto', sans-serif;
+    font-weight: bold;
+    font-size: 14px;
+    margin-top: 95px;
+    padding: 0 auto;
+}
+
+.columns p {
+    font-weight: 400;
+    line-height: 24px;
+    padding-top: 20px;
+    padding-bottom: 7px;
+    color: #757575;
+}
+
+.column-img-wrapper {
+	
+    margin-bottom: 30px;
+    padding: 25px 100px;
+    background-color: #F5F4FB;
+    border-radius: 4px;
+}
+
+h2 {
+    font-weight: bold;
+    font-size: 36px;
+}
+
+h3 {
+    font-weight: 600;
+    font-size: 14px;
+}
+
+h4 {
+    font-weight: 500;
+    font-size: 16px;
+}
+
+/* ========================================================================================================= */
+.services {
+    display: flex;
+    flex-direction: column;
+    padding: 0 auto;
+    align-items: center;
+}
+
+.services h2 {
+    margin-top: 101px;
+    margin-bottom: 59px;
+}
+
+.container-services {
+    width: 100%;
+}
+
+.service-gallery {
+    display: flex;
+    width: 100%;
+}
+
+.gallery-item {
+    margin: 0 auto;
+    max-width: 330px;
+    max-height: auto;
+    margin-bottom: 94px;
+}
+
+/* ========================================================================================================= */
+.team-members {
+    margin: 0px -180px 0 -180px;
+    background-color: #F5F4FB;
+    font-family: 'Roboto';
+    font-weight: 400;
+    font-size: 16px;
+    text-align: center;
+    padding-right: 180px;
+    padding-left: 180px;
+    padding-bottom: 94px;
+    padding-top: 94px;
+}
+
+.team-members-container {
+    margin-top: 30px;
+    display: flex;
+    justify-content: space-between;
+    padding: 0 auto;
+}
+
+.team-member {
+    background-color: #fff;
+    max-width: 200px;
+    max-height: 368px;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+.team-member:hover {
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.6);
+    cursor: pointer;
+}
+
+.team-member img {
+    height: auto;
+    width: 100%;
+}
+
+.team-member h3 {
+    font-size: 22px;
+    color: #333;
+    margin-top: 30px;
+}
+
+.team-member p {
+    margin-top: 14px;
+    margin-bottom: 34px;
+    font-family: 'Roboto';
+    font-weight: 400;
+    font-size: 16px;
+    color: #757575;
+}
+
+/* ========================================================================================================= */
+.logos-icons {
+	display: flex;
+	justify-content: space-around;
+	margin-bottom: 30px;
+}
+
+.instagram-logo .outer-circle {
+	transition: background 0.3s;
+}
+
+.instagram-logo .background-circle {
+	fill: transparent;
+	transition: fill 0.3s;
+}
+
+.instagram-logo .inner-square {
+	fill: transparent;
+	stroke: #AFB1B8;
+	stroke-width: 2;
+	transition: stroke 0.3s;
+}
+
+.instagram-logo .camera-lens {
+	fill: transparent;
+	stroke: #AFB1B8;
+	stroke-width: 2;
+	transition: stroke 0.3s;
+}
+
+.instagram-logo .flash {
+	fill: #AFB1B8;
+	transition: fill 0.3s;
+}
+
+.instagram-logo:hover .background-circle {
+	fill: #1da1f2;
+}
+
+.instagram-logo:hover .inner-square {
+	stroke: white;
+}
+
+.instagram-logo:hover .camera-lens {
+	stroke: white;
+}
+
+.instagram-logo:hover .flash {
+	fill: white;
+}
+
+
+/* ========================================================================================================= */
+.icon {
+    font-family: Arial, sans-serif;
+    font-weight: bold;
+    color: #AFB1B8;
+    background-color: transparent;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 38px;
+    height: 38px;
+    border-radius: 50%;
+    font-size: 24px;
+    text-decoration: none;
+}
+
+.icon:hover {
+    color: #fff;
+    background-color: #1da1f2;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 38px;
+    height: 38px;
+    border-radius: 50%;
+    text-decoration: none;
+}
+
+/* ========================================================================================================= */
+
+.twitter-icon {
+    color: #AFB1B8;
+    background-color: transparent;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 38px;
+    height: 38px;
+    border-radius: 50%;
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.twitter-icon:hover {
+    color: #fff;
+    background-color: #1DA1F2;
+    /* Twitter-like color */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 38px;
+    height: 38px;
+    border-radius: 50%;
+    font-size: 24px;
+    font-weight: bold;
+}
+
+
+
+/* ========================================================================================================= */
+
+.in-icon {
+    color: #AFB1B8;
+    background-color: transparent;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 38px;
+    height: 38px;
+    border-radius: 50%;
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.in-icon:hover {
+    color: #fff;
+    background-color: #1DA1F2;
+    /* Twitter-like color */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 38px;
+    height: 38px;
+    border-radius: 50%;
+    font-size: 24px;
+    font-weight: bold;
+}
+
+
+
+/* ========================================================================================================= */
+
+/* ========================================================================================================= */
+.burger{
+	display: none;
+}
+
+.header-menu-items {
+    position: relative;
+    /* Для правильного позиционирования псевдоэлемента */
+}
+
+.header-menu-items a {
+    position: relative;
+    /* Для псевдоэлемента */
+    padding-bottom: 10px;
+    text-decoration: none;
+    /* Убираем подчеркивание текста */
+    color: #000;
+    /* Цвет текста */
+}
+
+.header-menu-items a.active {
+    color: #2196F3;
+    /* Цвет активной ссылки */
+}
+
+.header-menu-items a::after {
+    border-radius: 2px;
+    content: "";
+    display: block;
+    width: 100%;
+    height: 4px;
+    background-color: #2196F3;
+    position: absolute;
+    /* Позволяет располагать линию относительно родительского элемента */
+    bottom: -33px;
+    /* Ставим линию внизу ссылки */
+    left: 0;
+    /* Выравниваем по левому краю */
+    transform: scaleX(0);
+    /* Изначально линия скрыта */
+    transition: transform 0.3s ease;
+    /* Плавный переход */
+}
+
+.header-menu-items a.active::after {
+    transform: scaleX(1);
+    /* Показываем линию для активной ссылки */
+}
+
+
+
+
+
+
+
+
+/* ========================================================================================================= */
+.header-menu-tab {
+    cursor: pointer;
+    display: inline-block;
+}
+
+.header-menu-tab.active {
+    background-color: #2196F3;
+    color: white;
+}
+
+.tab-pane {
+    display: none;
+}
+
+/* ========================================================================================================= */
+.grid-container {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    grid-template-rows: repeat(3, auto);
+    gap: 30px;
+    justify-content: center;
+}
+
+.grid-item {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    background-color: white;
+    color: black;
+    border: 1px solid #EEEEEE;
+    padding-bottom: 30px;
+    transition: color 300ms linear, background-color 300ms linear, border-color 300ms linear;
+    position: relative;
+    /* Позволяет позиционировать дочерние элементы */
+}
+
+.grid-item:hover {
+
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+.grid-item img {
+    max-width: 100%;
+    height: auto;
+}
+
+.grid-item h3,
+.grid-item a {
+    font-weight: bold;
+    font-size: 18px;
+    padding-top: 30px;
+    padding-bottom: 16px;
+    padding-left: 15px;
+    color: inherit;
+    text-decoration: none;
+}
+
+.grid-item p {
+    font-weight: 400;
+    font-size: 16px;
+    color: #757575;
+    padding-left: 15px;
+}
+
+.info {
+    font-size: 18px;
+    line-height: 28px;
+
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: rgba(54, 160, 243, 0.7);
+    color: white;
+    padding: 10px;
+    opacity: 0;
+    transform: translateY(100%);
+    transition: opacity 0.3s ease, transform 0.3s ease;
+    display: flex;
+    align-items: center;
+}
+
+
+.grid-item:hover .info {
+    opacity: 1;
+    transform: translateY(0);
+    height: 100%;
+}
+
+
+
+
+
+
+
+
+
+/* ========================================================================================================= */
+.button-container {
+    display: flex;
+    justify-content: center;
+    gap: 8px;
+    margin-top: 95px;
+    margin-bottom: 50px;
+}
+
+.category-button {
+    font-weight: 500;
+    padding: 12px 44px;
+    background-color: #F5F4FB;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.category-button:hover {
+    background-color: #2196F3;
+    color: white;
+}
+
+/* ========================================================================================================= */
+
+.partners-section {
+    padding: 94px 0 94px 0;
+    text-align: center;
+}
+
+.partners-section h2 {
+    font-family: 'Roboto';
+    font-size: 36px;
+    font-weight: bold;
+    margin-bottom: 50px;
+}
+
+.partners-grid {
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    margin: 0 auto;
+}
+
+.partner-logo {
+    cursor: pointer;
+    padding: 23px 58px;
+    border: 1px solid #ACACB0;
+    background-color: transparent;
+    max-height: 92px;
+    max-width: 170px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 8px;
+}
+
+.partner-logo img {
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: contain;
+    filter: grayscale(100%);
+    /* Изображение черно-белое */
+    transition: filter 0.3s;
+    /* Плавный переход для эффекта */
+}
+
+.partner-logo:hover {
+    border: 1px solid #2196F3;
+    /* Синий цвет рамки при наведении */
+    background-color: transparent;
+}
+
+.partner-logo:hover img {
+    filter: brightness(0) saturate(100%) invert(34%) sepia(100%) saturate(1026%) hue-rotate(195deg) brightness(92%) contrast(90%);
+}
+
+/* ========================================================================================================= */
+#successMessage {
+	display: none;
+	position: fixed;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	background-color: #2381CC;
+	color: white;
+	padding: 20px;
+	border-radius: 5px;
+	font-size: 1.5em;
+	opacity: 0;
+	transition: opacity 0.5s ease-in-out, transform 0.5s ease-in-out;
+}
+
+#successMessage.show {
+	display: block;
+	opacity: 1;
+	transform: translate(-50%, -50%) scale(1.1);
+}
+
+/* ========================================================================================================= */
+
+.footer {
+	display: flex;
+	margin-left: -180px;
+	margin-right: -180px;
+	padding-left: 180px;
+	background-color: #2F303A;
+	padding-top: 60px;
+	padding-bottom: 60px;
+	color: #FFFFFF;
+	margin-top: auto;
+}
+
+.footer a {
+	color: #ACACB0;
+	text-decoration: none;
+}
+
+.WebStudio-footer {
+  margin-left: -5px;
+	margin-bottom: 34px;
+}
+
+.footer-address,
+.footer-email,
+.footer-phone {
+	margin-bottom: 9px;
+}
+
+.footer-media {
+	margin-left: 93px;
+	max-width: 206px;
+}
+
+
+/* ========================================================================================================= */
+.modal {
+	font-family: 'Roboto', sans-serif; /* Шрифт Roboto */
+	display: none; /* Скрыто по умолчанию */
+	position: fixed; /* Фиксированное позиционирование */
+	z-index: 100; /* Ставим выше других элементов */
+	left: 0; /* Отступ слева */
+	top: 0; /* Отступ сверху */
+	width: 100%; /* Полная ширина */
+	height: 100%; /* Полная высота */
+	background-color: rgba(0, 0, 0, 0.5); /* Серый фон с прозрачностью */
+	overflow: hidden; /* Отключаем прокрутку */
+}
+
+.label-modal {
+	display: block; /* Блочный элемент */
+	margin-bottom: 4px; /* Отступ снизу */
+}
+
+.modal-content {
+	max-width: 450px; /* Максимальная ширина */
+	max-height: 609px; /* Максимальная высота */
+	display: flex;
+	flex-direction: column; /* Вертикальное выравнивание содержимого */
+	padding: 40px; /* Внутренний отступ */
+	color: #757575; /* Цвет текста */
+	border-radius: 4px; /* Закругленные углы */
+	background-color: #fff; /* Цвет фона */
+	animation: slide-in 0.5s ease; /* Анимация появления */
+	position: absolute; /* Изменено на абсолютное позиционирование*/
+	top: 50%; /* Позиционируем от верхней части окна */
+	left: 50%; /* Позиционируем от левой части окна */
+	transform: translate(-50%, -50%); /* Центрируем по середине */
+}
+
+@keyframes slide-in {
+	from {
+		 transform: translate(-50%, -50%) translateY(-50px); /* Начальная позиция */
+		 opacity: 0; /* Прозрачность */
+	}
+	to {
+		 transform: translate(-50%, -50%); /* Конечная позиция */
+		 opacity: 1; /* Полная непрозрачность */
+	}
+}
+
+.close {
+	color: black;
+	font-size: 24px;
+	font-weight: 400;
+	width: 30px;
+	height: 30px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	border-radius: 50%;
+	background-color: #FFFFFF; 
+	border: 1px solid #ccc;
+	cursor: pointer;
+	position: absolute;
+	top: 10px;
+	right: 15px;
+}
+
+.close:hover,
+.close:focus {
+	color: #2196F3; /* Цвет текста при наведении */
+}
+
+.modal-content h2 {
+	color: #000; /* Цвет текста */
+	font-weight: bold; /* Жирный шрифт */
+	font-size: 20px; /* Размер шрифта */
+	margin-bottom: 20px; /* Отступ снизу */
+	display: flex; /* Используем Flexbox для центровки */
+	justify-content: center; /* Центрируем содержимое по горизонтали */
+	text-align: center; 
+}
+
+.label-modal, .checkbox-label, a {
+	color: #757575;
+	font-size: 12px;
+}
+
+.checkbox-agreement {
+	color: #2196F3;
+}
+
+.category-button-modal { 
+	margin: 35px auto 40px; /* Отступ сверху 35px, снизу 40px, авто по бокам */
+	display: flex; /* Используем Flexbox */
+	justify-content: center; /* Центрируем содержимое */
+}
+
+.checkbox-label {
+	display: flex; /* Гибкое расположение */
+	align-items: center; /* Вертикальное выравнивание */
+	margin-bottom: 15px; /* Отступ снизу */
+}
+
+input[type="text"],
+input[type="email"],
+input[type="tel"],
+textarea {
+	width: 100%; /* Полная ширина */
+	height: 39px;
+	border: 1px solid #ccc; /* Цвет границы */
+	border-radius: 4px; /* Закругленные углы */
+}
+
+.input-container {
+	position: relative;
+	margin-bottom: 10px; /* Отступ снизу */
+}
+.input-container input:focus {
+	border-color: #2196F3; /* Цвет границы при фокусе */
+	outline: none; /* Убирает стандартный обвод */
+}
+.input-container:focus-within .modal-img {
+	filter: brightness(0) saturate(100%) invert(50%) sepia(100%) saturate(200%) hue-rotate(170deg); /* Изменяет цвет изображения */
+}
+
+.input-container input, 
+.input-container textarea {
+	padding-left: 30px; /* Отступ слева, чтобы текст не перекрывал изображение */
+	width: 100%; /* Ширина 100%, чтобы занимать весь доступный пространство */
+	box-sizing: border-box; /* Учитываем padding в ширине элемента */
+}
+
+.image-container {
+	position: absolute;
+	top: 67%;
+	left: 10px;
+	transform: translateY(-50%);
+}
+
+.modal-img {
+	width: 18px;
+	height: auto;
+}
+.input-container-coment{
+	min-height: 138px;
+}
+.input-container-coment textarea {
+	font-family: 'roboto';
+	font-size: 12px;
+	width: 100%; /* Занимает всю ширину */
+	height: 100%; /* Занимает всю высоту контейнера */
+	padding: 16px; /* Внутренний отступ */
+	box-sizing: border-box;
+	resize: none;
+}
+
+
+
+/* ========================================================================================================= */@media (max-width: 768px) {
+	.wraper {
+		height: 100%;
+		width: 100%;
+		margin: 0 15px!important;
+		position: relative;
+	}
+
+	.header {
+		align-items: flex-start;
+	}
+
+	.header-all {
+		flex-direction: column; /* Вертикальное расположение */
+		align-items: center; /* Центрируем содержимое */
+	}
+
+	.burger {
+		display: flex; /* Показываем бургер-меню на мобильных устройствах */
+		flex-direction: column; /* Вертикальное расположение линий */
+		cursor: pointer; /* Указатель при наведении */
+	}
+
+	.line {
+		height: 3px; /* Высота линий */
+		width: 30px; /* Ширина линий */
+		background-color: black; /* Цвет линий */
+		margin: 3px 0; /* Отступ между линиями */
+	}
+
+	.header-menu-items {
+		display: none; /* Скрываем меню по умолчанию для мобильных устройств */
+	}
+
+	.columns,
+	.main,
+	.block-one,
+	.footer {
+		width: 100%;
+	}
+
+	.block-one,
+	.footer {
+		margin: 0 -15px; /* Убираем отступы */
+	}
+
+	.custom-line {
+		display: none;
+	}
+
+	.block-one h1 {
+		font-size: 26px; /* Устанавливает размер шрифта в 26 пикселей */
+	}
+
+	h2 {
+		font-size: 28px;
+	}
+
+	.team-members {
+		padding: 0; /* Убираем отступы */
+		margin: 0; /* Убираем отступы */
+		display: flex; /* Используем flexbox для центрирования */
+		flex-direction: column; /* Вертикальное направление */
+		align-items: center; /* Центрируем по горизонтали */
+	}
+
+	.team-members-container {
+		display: grid;
+		grid-template-columns: 1fr; /* Одна колонка */
+		gap: 40px; /* Расстояние между team-member */
+		max-width: 100%;
+	}
+
+	.team-member {
+		background: #f9f9f9; /* Цвет фона для наглядности */
+		padding: 20px; /* Внутренние отступы */
+		border-radius: 10px; /* Закругление углов */
+		box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+		max-width: 100%;
+		text-align: center;
+	}
+
+	.team-member img {
+		max-height: 100%;
+		width: auto; /* Адаптивная ширина */
+		margin-bottom: 15px; /* Отступ между изображением и текстом */
+	}
+
+	.services {
+		display: none; /* Скрываем секцию услуг */
+	}
+
+	.partners-section {
+		padding: 0; /* Убираем отступы */
+	}
+
+	.button-container {
+		display: grid;
+		grid-template-columns: repeat(3, 1fr); /* Задаем 3 колонки */
+		grid-template-rows: auto auto; /* Задаем 2 строки */
+		width: 100%;
+		gap: 15px 8px; /* Горизонтальное и вертикальное расстояние */
+		margin-top: 60px; /* Отступ сверху */
+		margin-bottom: 40px; /* Отступ снизу */
+	}
+
+	.partners-grid {
+		display: grid;
+		grid-template-columns: repeat(3, 1fr); /* Задаем 3 колонки */
+		margin: 0;
+	}
+
+	.category-button {
+		padding: 13px 22px; /* Отступы для кнопок категории */
+	}
+
+	.grid-container {
+		display: flex;
+		flex-direction: column; /* Вертикальное направление */
+		margin-bottom: 60px; /* Отступ снизу */
+	}
+
+	.column-img-wrapper {
+		display: flex;
+		justify-content: center; /* Центрируем по горизонтали */
+		align-items: center; /* Центрируем по вертикали */
+		margin-right: 15px; /* Отступ справа */
+		max-width: 430px; /* Максимальная ширина */
+		max-height: 120px; /* Максимальная высота */
+		position: relative; /* Относительное позиционирование */
+	}
+
+	.column-img {
+		text-align: center; /* Центрируем текст */
+		max-width: 100%; /* Адаптивная ширина */
+		height: auto; /* Автоматическая высота */
+	}
+	.columns , .footer{
+		display: none;
+	}
+}
